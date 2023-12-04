@@ -63,7 +63,10 @@ void main() {
   print("people: $people");
   print("people[0].name: ${people[0].name}");
   for (int i = 0; i < people.length; i++) {
-    print(people[i].name);
+    print("people[i].name ${people[i].name}");
+  }
+  for (final person in people) {
+    print("perosn.name ${person.name}");
   }
 }
 
