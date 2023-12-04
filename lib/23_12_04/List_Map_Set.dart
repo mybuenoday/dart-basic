@@ -27,7 +27,7 @@ void main() {
 
   print("< 10명 학생 점수 >");
   //(1)
-    print("test: $test");
+  print("test: $test");
   //(2)
   test.forEach(print);
   //(3)
@@ -57,4 +57,18 @@ void main() {
   population.entries.forEach((element) {
     print(element.value);
   });
+;
+  // 2-2. 이름이 '홍길동', '한석봉'인 Person 인스턴스 생성, List에 담는다.
+  List<Person> people = [Person('홍길동'), Person('한석봉')];
+  print("people: $people");
+  print("people[0].name: ${people[0].name}");
+  for (int i = 0; i < people.length; i++) {
+    print(people[i].name);
+  }
+}
+
+// 2-1. 이름을 반드시 가지는 Person 클래스
+class Person {
+  final String name;
+  Person(this.name);
 }
