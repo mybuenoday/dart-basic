@@ -31,12 +31,12 @@ void main() {
   //(2)
   test.forEach(print);
   //(3)
-  test.forEach((grade){
-    print("forEach((grade){: $grade");
+  test.forEach((i){
+    print("forEach((i){: $i");
   });
   //(4)
-  for (final grade in test) {
-    print("for in: $test");
+  for (final i in test) {
+    print("for in: $i");
   }
   //(5)
   for (int i = 0; i < test.length; i++) {
@@ -44,7 +44,7 @@ void main() {
   }
 
   // 1-3. 대한민국 도시별 인구수 (순서 상관 없음) Map
-  Map<String, dynamic> population = {
+  Map<String, int> population = {
     '서울' : 1000,
     '인천' : 300,
     '부산' : 200,
@@ -68,6 +68,15 @@ void main() {
   for (final person in people) {
     print("perosn.name ${person.name}");
   }
+
+  // 2-3. 이름과 나이를 쌍으로 출력
+  Map<String, int> age = {
+    Person('홍길동').name: 20,
+    Person('한석봉').name: 25,
+  };
+  age.forEach((key, value) {
+    print('$key의 나이는 $value살');
+  });
 }
 
 // 2-1. 이름을 반드시 가지는 Person 클래스
